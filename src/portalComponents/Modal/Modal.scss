@@ -1,0 +1,50 @@
+@import "../../commonStyles/customProperties.scss";
+.Modal{
+  font-family: $font-regular;
+  .opacityLayout{
+    position: fixed;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    background-color:rgba(0,0,0,0.5);
+    z-index: 3;
+  }
+  .title{
+    position: absolute;
+    top:0px;
+    width:100%;
+    height:30px;
+    color:white;
+    background-color:#509f96;
+    line-height: 30px;
+    text-align:center;
+    font-size:1.3rem;
+    .close{
+      position: absolute;
+      right:5px;
+      top:0px;
+      font-size:20px;
+      color:white;
+      cursor: pointer;
+    }
+  }
+  .modal_body{
+    position: absolute;
+    background-color:white;
+    top:50%;
+    left:50%;
+    width:100%;
+    max-width: 420px;
+    padding-top:30px;
+    transform:translate(-50%,-50%);
+    .children{
+      text-align:center;
+      padding: 10px;
+      p{
+        margin-bottom:10px;
+      }
+    }
+  }
+
+}

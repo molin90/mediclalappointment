@@ -1,0 +1,22 @@
+.Home{
+  .firstModule, .HomeLinksContainer{
+    padding:2rem 0px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    width:100%;
+  }
+  .HomeLinksContainer{
+    padding:0px !important;
+    .gap{
+      padding:10px;
+      width:50%;
+      .CustomButton{
+        margin: 10px auto;
+        display:block;
+      }
+    }
+  }
+
+}

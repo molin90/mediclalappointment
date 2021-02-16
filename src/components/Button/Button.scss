@@ -1,0 +1,176 @@
+@import "../../commonStyles/customProperties.scss";
+
+.button {
+  border: none;
+  outline: none;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  font-family: $font-regular;
+  height: 40px;
+  line-height:40px;
+  width: auto;
+  min-width:240px;
+  padding:5px 10px 5px 10px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s;
+  span, svg{
+    position: absolute;
+    height: 35px;
+    line-height:35px;
+    font-size:1.2rem;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+  }
+  /* .label {
+    opacity: 0;
+    width:100%;
+    -webkit-animation: opacityTrue 0s 0s linear forwards;
+    animation: opacityTrue 0s 0s linear forwards;
+  } */
+  .label{
+    opacity: 1;
+    width:100%;
+    padding:0px 2.5px;
+    overflow: hidden;
+    font-size:1.35rem;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .label.error,
+  .label.success {
+    opacity:0;
+    -webkit-animation: opacityTrue 0.3s 3s linear forwards;
+    animation: opacityTrue 0.3s 3s linear forwards;
+  }
+  /*
+  .svganimation{
+    opacity:0;
+    -webkit-animation: opacityTrue .3s 4s linear forwards;
+    animation: opacityTrue .3s 5s linear forwards;
+  }*/
+  .svganimation.error,
+  .svganimation.success {
+    opacity:0;
+    -webkit-animation: opacityTrueWithExit 3s 0s linear forwards;
+    animation: opacityTrueWithExit 3s 0s linear forwards;
+  }
+  /*
+  &.loading svg {
+    opacity:1;
+  }
+  /* .disable {
+    opacity: 0.5;
+    pointer-events: none;
+  } */
+  /* THEMES */
+  &.typeSolid.themePanel{
+    border: 1px solid darken(#509f96, 10);
+    background-color: darken(#509f96, 10);
+    // background-color: #FF8339;
+    color:white;
+  }
+  &.typeSolid.themeWhite{
+    border: 1px solid white;
+    background-color: white;
+    // background-color: #FF8339;
+    color: black;
+  }
+
+}
+
+.infoOp {
+  span {
+    display:block;
+  }
+  padding-top:10px;
+  text-align: center;
+  font-size:1rem;
+  &.error{ color: red; }
+  &.success{ color: green; }
+  &.loading{ color: $color-grey2; }
+}
+
+.path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 0;
+  &.circle {
+    -webkit-animation: dash .9s linear;
+    animation: dash .9s linear;
+  }
+  &.line {
+    stroke-dashoffset: 1000;
+    -webkit-animation: dash .9s .35s linear forwards;
+    animation: dash .9s .35s linear forwards;
+  }
+  &.check {
+    stroke-dashoffset: -100;
+    -webkit-animation: dash-check .9s .35s linear forwards;
+    animation: dash-check .9s .35s linear forwards;
+  }
+}
+
+@keyframes opacityTrue {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@-webkit-keyframes opacityTrue {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@keyframes opacityTrueWithExit {
+  0% {opacity: 1}
+  99% {opacity: 1}
+  100%{opacity: 0}
+}
+
+@-webkit-keyframes opacityTrueWithExit {
+  0% {opacity: 1}
+  99% {opacity: 1}
+  100%{opacity: 0}
+}
+
+@keyframes opacityFalse {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@-webkit-keyframes opacityFalse {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
+@-webkit-keyframes dash {
+  0% {stroke-dashoffset: 1000;}
+  100% {stroke-dashoffset: 0;}
+}
+
+@keyframes dash {
+  0% {stroke-dashoffset: 1000;}
+  100% {stroke-dashoffset: 0;}
+}
+
+@-webkit-keyframes dash-check {
+  0% {stroke-dashoffset: -100;}
+  100% {stroke-dashoffset: 900;}
+}
+
+@keyframes dash-check {
+  0% {stroke-dashoffset: -100;}
+  100% {stroke-dashoffset: 900;}
+}
+
+
+@media only screen and (min-width: 600px) {
+  .button {
+    &.typeSolid.themePanel:hover{
+      background-color:#509f96;
+      border:1px solid #509f96;
+    }
+  }
+}

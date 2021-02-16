@@ -1,0 +1,225 @@
+@import "../../commonStyles/customProperties.scss";
+
+/* BASIC */
+body.modal-open{
+  overflow: hidden;
+}
+.flyOutContainer .opacityLayout {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  z-index: 9999;
+}
+
+.flyOutContainer .visible{
+  display:block
+}
+
+.flyOutContainer .flyOut {
+  font-family:$font-regular;
+  top:5%;
+  left:50%;
+  background: white;
+  width: 50%;
+  min-width:660px;
+  height: auto;
+  padding: 20px;
+  z-index: 99999;
+  color: $color-grey4;
+  transform: translate(0, -50%);
+  position: relative;
+  background-color: $color-blue;
+}
+.flyOutContainer .flyOut .ownContent{
+  background-color: $color-white;
+  margin-top:20px;
+  margin-bottom: 0px;
+  text-align: left;
+  height:100%;
+  padding:20px 20px 40px 20px;
+}
+
+.flyOutContainer .flyOut h2{
+  font-size: 1.375rem;
+  font-family: $font-light;
+  color: $color-grey4;
+  background-color: $color-white;
+  text-align: center;
+  margin-top: -50px;
+  border: 1px solid;
+  padding-bottom: 25px;
+  padding-top: 25px;
+  border-color: $color-grey1;
+}
+.flyOutContainer .flyOut h3{
+  margin-bottom: 19px;
+  font-family: $font-light;
+  color: $color-green;
+  margin-top: 20px;
+  font-size:1.25rem;
+}
+.flyOutContainer .flyOut .button{margin-top: 40px;margin-bottom: 20px;}
+.flyOutContainer .display-block {display: block;}
+.flyOutContainer .display-none {display: none;}
+/* END BASIC */
+
+
+
+
+
+.flyOutContainer .flyOut p{
+   margin-bottom: 50px;
+}
+
+
+
+
+.flyOutContainer .flyOut .icon{
+ color: $color-white;
+ font-size: 1rem;
+ cursor: pointer;
+}
+
+.flyOutContainer .flyOut .iconWrapper{
+ margin-bottom:40px;
+ text-align:left;
+ margin-left:20px;
+}
+.flyOutContainer .opacityOff {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  animation: opacityOff 0.5s ease-in forwards;
+}
+    @keyframes opacityOff {
+      0% {
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.6);
+      display: block;
+      }
+      99% {
+      z-index: 9999;
+      background: rgba(0, 0, 0, 0.6);
+      display:block;
+      }
+      100% {
+      z-index: 0;
+        background: rgba(0, 0, 0, 0);
+        display:none;
+      }
+  }
+
+
+@media (min-width:768px){
+
+  .flyOutContainer .flyOut{
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      height: 100%;
+      padding: 20px 0px 0px 0px;
+  }
+  .flyOutContainer .flyOut .ownContent .scrollContent{
+    width: 460px;
+    overflow-y: auto;
+    max-height: calc(100vh - 150px);
+  }
+  .flyOutContainer .flyOut h2{
+      text-align: left;
+      padding-left: 20px;
+      margin-right: 40%;
+      font-weight: inherit;
+
+  }
+    .flyIn{
+      animation: flyIn 0.5s ease-in forwards;
+    }
+    @keyframes flyIn {
+      0% {
+
+        transform: translate(100%, -50%);
+      }
+      100% {
+
+        transform: translate(0%, -50%);
+      }
+    }
+    .flyMeToTheMoon{
+      animation: flyMeToTheMoon 0.5s ease-in forwards;
+    }
+    @keyframes flyMeToTheMoon {
+      0% {
+        transform: translate(0%, -50%);
+      }
+      90% {
+        display:block;
+        transform: translate(100%, -50%);
+      }
+      100% {
+        display:none;
+        transform: translate(100%, -50%);
+      }
+    }
+}
+
+
+@media (max-width:767px){
+
+  /* END BASICS */
+
+
+
+  .flyOutContainer .flyOut .ownContent {
+    background-color: $color-white;
+    margin-top:20px;
+    margin-bottom: 0px;
+    text-align: left;
+   padding: 20px 20px 40px 20px;
+  }
+
+  .flyOutContainer .flyOut h3{
+     color: $color-green;
+     margin-top: 20px;
+     font-size:1.25rem;
+  }
+  .flyOutContainer .flyOut p{
+     margin-bottom: 30px;
+  }
+
+  .flyOutContainer .flyOut{
+    color: $color-grey4;
+    background-color: $color-blue;
+    left: 5%;
+    width: 90%;
+    min-width: 25%;
+    height: 80%;
+    transform: translate(0, 0);
+    padding: 20px 0px 0px 0px;
+    display:block;
+    position:fixed;
+  }
+  .flyOutContainer .opacityOff {
+    animation: none;
+    display:none
+  }
+  .flyOutContainer .flyOut.info .icon{
+   color: $color-white;
+   font-size: 1rem;
+   cursor: pointer;
+  }
+  .flyOutContainer .flyOut.info.flyMeToTheMoon{
+      display:none;
+  }
+  .flyOutContainer .flyOut .ownContent .scrollContent{
+    overflow-y: auto;
+    max-height: calc(100vh - 251px);
+  }
+
+}

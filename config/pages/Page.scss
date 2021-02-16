@@ -1,0 +1,71 @@
+@import '../../src/commonStyles/customProperties.scss';
+
+.titlePicture{
+  width: 118px;
+  height: auto;
+  display: block;
+  margin: rem(20) auto 0px auto;
+}
+
+.textContainer{
+  padding:rem(15);
+  max-width:867px;
+  margin: 0 auto;
+  width:100%;
+  text-align: left;
+  a{
+    color:black;
+    &:hover{
+      text-decoration: underline;
+      text-decoration-color: black;
+    }
+  }
+  p{font-size:1rem;}
+  &.center {
+    text-align: center;
+  }
+  &.right {
+    text-align:right;
+  }
+  &.justify{
+    text-align: justify;
+  }
+}
+
+.separator {
+  width: 60px;
+  height: rem(2);
+  margin: 0 auto;
+  background-color:black;
+}
+
+.titlePage {
+  text-align: center;
+  font-size: 1.9rem;
+  line-height:1.65rem;
+  margin-top:rem(20);
+  padding:0px rem(10);
+  margin-bottom: rem(40);
+  text-transform: uppercase;
+  overflow:visible;
+}
+
+
+@media screen and (max-width:980px) {
+  .titlePicture{
+    width:105px;
+  }
+}
+
+@media screen and (max-width:680px) {
+  .titlePicture{
+    width:100px;
+  }
+}
+
+@media screen and (max-width:500px) {
+  .titlePicture{
+    width:95px;
+  }
+}
+

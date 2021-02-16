@@ -1,0 +1,28 @@
+@import './customProperties.scss';
+
+
+.regular{
+  font-family: $font-regular;
+  font-weight: 400;
+}
+
+.italic{
+  font-family: $font-regular;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.bold{
+  font-family: $font-regular;
+  font-weight: 700;
+}
+
+.bolditalic{
+  font-family: $font-regular;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.pagina{
+  padding: 10px;
+}

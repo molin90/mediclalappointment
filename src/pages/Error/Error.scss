@@ -1,0 +1,79 @@
+@import "../../commonStyles/customProperties.scss";
+
+.NotFound{
+  position:relative;
+  width:100vw;
+  height:100vh;
+  .infoContainer{
+    position: absolute;
+    top:50%;
+    left:50%;
+    max-width:650px;
+    margin: 0 auto;
+    width:100%;
+    padding:10px;
+    transform: translate(-50%, -50%);
+    .Card{
+      background-color:white;
+      border-radius: 10px;
+    }
+    .errorAndLogo{
+      display:flex;
+      align-items: center;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      .errorCode {
+        text-align:left;
+        img{
+          display:inline-block;
+          max-width: 200px;
+          width:100%;
+          height:auto;
+        }
+      }
+      .logo{
+        text-align: right;
+        img {
+          height: auto;
+          width:100%;
+          max-width: 181px;
+          display:inline-block;
+        }
+      }
+    }
+    .infoText{
+      text-align: justify;
+      padding:25px 10px 0px 10px;
+      p {
+        font-family:$font-regular;
+        font-weight:400;
+        font-size:1.1rem;
+        color:$color-grey2;
+      }
+      .button_container{
+        display: flex;
+        width:100%;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        button{
+          margin-top:20px;
+          width:20%;
+        }
+        a{
+          margin:0 auto;
+          display: block;
+        }
+
+      }
+    }
+    .errorFooter{
+      width:100%;
+      margin-top:20px;
+      background-size: auto 40px;
+      background-position:center;
+      background-repeat: no-repeat;
+      height:44px;
+    }
+  }
+}

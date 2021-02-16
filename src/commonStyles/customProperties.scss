@@ -1,0 +1,16 @@
+/* fuentes */
+$font-regular: 'Cantarell', sans-serif;
+$font-bold: 'Cantarell', sans-serif;
+$font-light:'Cantarell', sans-serif;
+
+  /* colores basicos */
+$color-grey1: #323232;
+$color-grey2: #424242;
+
+
+
+/* TOOLS */
+@function rem($size) {
+  $remSize: $size / 16;
+  @return #{$remSize}rem;
+}

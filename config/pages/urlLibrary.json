@@ -1,0 +1,47 @@
+[
+  {
+    "loader": "Home",
+    "pathName": "/",
+    "exact": true,
+    "redirection": null,
+    "onlyDev": false,
+    "seoReqData": {
+      "page": "Home",
+      "entity": null,
+      "idName": null
+    }
+  },
+  {
+    "loader": "NotAllow",
+    "pathName": "/403",
+    "exact": true,
+    "redirection": null,
+    "onlyDev": false,
+    "seoReqData": null
+  },
+  {
+    "loader": "NotFound",
+    "pathName": "/404",
+    "exact": true,
+    "redirection": null,
+    "onlyDev": false,
+    "seoReqData": null
+  },
+  {
+    "loader": "Error",
+    "pathName": "/500",
+    "exact": true,
+    "redirection": null,
+    "onlyDev": false,
+    "seoReqData": null
+  }
+  ,
+  {
+    "loader": "NotFound",
+    "pathName": "*",
+    "exact": true,
+    "redirection": "/404",
+    "onlyDev": false,
+    "seoReqData": null
+  }
+]
